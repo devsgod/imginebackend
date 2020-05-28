@@ -24,7 +24,8 @@ import Icons from "../../pages/icons";
 import Charts from "../../pages/charts";
 
 import UserList from "../../pages/users/userList";
-import userContact from "../../pages/users/userContact";
+import UserContact from "../../pages/users/userContact";
+import TestDrive from "../../pages/users/testDrive";
 
 import ProductList from "../../pages/products/productList";
 import ProductAddOrUpdate from "../../pages/products/productAddOrUpdate";
@@ -86,7 +87,9 @@ function Layout(props) {
               <Route path="/app/ui/charts" component={Charts} />
 
               <Route path="/app/users" exact={true} component={UserList} />
-              <Route path="/app/users/contact" exact={true} component={userContact} />
+              <Route path="/app/users/contact" exact={true} component={UserContact} />
+              <Route path="/app/users/testdrive" exact={true} component={TestDrive} />
+
               <Route path="/app/products/list" component={ProductList} />
 
               {/* add by :  add category */}

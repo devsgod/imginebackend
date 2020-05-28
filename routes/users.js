@@ -39,6 +39,41 @@ async function sendTestEmailConfirmation(user) {
       });
 }
 
+//Send Welcome
+async function sendSuccessEmail(user) {
+
+  const mailOptions = {
+      from: 'info@imaginesignage.com',
+      to: user.email,
+      // replyTo: 'Signup@imagineignage.com', 
+      subject: "Successfully Registered!"
+  };
+
+  const fileLocation = path.join( __dirname, 'emails', 'success.html' );
+    
+  let html = await fs.readFile( fileLocation, 'utf-8' );
+
+    // html = html.replace( '[(ConfirmURL)]', process.env.MAIL_SUCCESS + "?id=" + user.id );
+    html = html.replace( 'firstName', user.firstName );
+    html = html.replace( 'lastName', user.lastName );
+    html = html.replace( 'login_url', user.username );
+    html = html.replace( 'login_username', user.username );
+    html = html.replace( 'login_password', user.password );
+    
+    mailOptions.html = html;
+
+    sgMail
+      .send(mailOptions)
+      .then(() => {
+        console.log("Nice");
+      }, error => {
+        console.error(error);
+        if (error.response) {
+          console.error(error.response.body)
+        }
+      });
+}
+
 // user model
 let User = require('../models/user.model');
 
@@ -124,8 +159,9 @@ router.route('/confirmuserid').post((req, res) => {
   .then(user => {
     if(user){
       if(user.id == user_id){
-        user.updateOne({email:email}, {signupStatus:"Setting Up"})
+        User.updateOne({email:email}, {signupStatus:"Setting Up"})
         .then(()=>{
+          console.log(user);
           var token = jwt.sign({ id: user.id },
             process.env.jwtSecret,
             { expiresIn: 3600 }, // an hour
@@ -170,6 +206,9 @@ router.route('/activate').post((req, res) => {
       if(user.username == username){
         User.updateOne({email:email}, {signupStatus:"Active"})
         .then(()=>{
+
+          sendSuccessEmail(user);
+          
           return res.status(200).json({
             msg: 'Have done',
             signupStatus: "Activate",

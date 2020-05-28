@@ -3,7 +3,7 @@ import { Grid } from "@material-ui/core";
 import MUIDataTable from "mui-datatables";
 
 // components
-import PageTitle from "../../components/PageTitle";
+import PageTitle from "../../components/PageTitle/PageTitle";
 import UserCard from "./userCard";
 // import Widget from "../../components/Widget";
 // import Table from "../dashboard/components/Table/Table";
@@ -100,7 +100,7 @@ const columns = [
   //  },
  ];
 
-function UserList() {
+function TestDrive() {
 
   var [isLoading, setIsLoading] = useState(false);
   var [error, setError] = useState(null);
@@ -179,4 +179,4 @@ function UserList() {
   );
 }
 
-export default UserList;
+export default TestDrive;
