@@ -13,6 +13,7 @@ import UserCard from "./userCard";
 
 import axios from "axios";
 import config from "../../config/config.json";
+// import config from "../../config/config_local.json";
 
 //import { useAdminUserState, useAdminUserDispatch, getUserList } from "../../context/AdminUserContext";
 
@@ -59,20 +60,20 @@ const columns = [
    },
   {
     name: "message",
-    label: "Register Message",
+    label: "Message",
     options: {
      filter: true,
      sort: false,
     }
    },
-  //  {
-  //   name: "updatedAt",
-  //   label: "UpdatedAt",
-  //   options: {
-  //    filter: true,
-  //    sort: false,
-  //   }
-  //  },
+   {
+    name: "updatedAt",
+    label: "UpdatedAt",
+    options: {
+     filter: true,
+     sort: false,
+    }
+   },
   //  {
   //   name: "__v",
   //   label: "__v",
@@ -136,20 +137,20 @@ function UserContact() {
             columns={columns}
             options={{
               filterType: "checkbox",
-              // onRowsDelete: ( selectedData ) => {
-              //   let userArray = [];
-              //   selectedData.data.map ( item => {
-              //     userArray.push(userlist[item.index]['_id']);
-              //   });
+              onRowsDelete: ( selectedData ) => {
+                let userArray = [];
+                selectedData.data.map ( item => {
+                  userArray.push(userlist[item.index]['_id']);
+                });
 
-              //   console.log(userArray);
+                console.log(userArray);
 
-              //   axios.post(config.DELETE_USER, userArray)
-              //   .then(res => {
-              //   })
-              //   .catch(function (error) {
-              //   });
-              // },
+                axios.post(config.DELETE_CONTACTS, userArray)
+                .then(res => {
+                })
+                .catch(function (error) {
+                });
+              },
 
               onRowsSelect: (currentRowsSelected, allRowsSelected) => { 
                 setShowEdit(true); 

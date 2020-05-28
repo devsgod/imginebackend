@@ -7,12 +7,13 @@
     "DELETE_USER": "http://cms.imaginesignage.com/users/delete",
 
     "ALL_CONTACTS": "http://cms.imaginesignage.com/contact/",
+    "DELETE_CONTACTS": "http://cms.imaginesignage.com/contact/delete",
     
     "ALL_PRODUCTS": "http://cms.imaginesignage.com/products/",
     "ADD_PRODUCT": "http://cms.imaginesignage.com/products/add",
     "EDIT_PRODUCT": "http://cms.imaginesignage.com/products/edit",
     "DELETE_PRODUCT": "http://cms.imaginesignage.com/products/delete",
-
+    
     "ALL_CATEGORY" : "http://cms.imaginesignage.com/category/",
     "ADD_CATEGORY" : "http://cms.imaginesignage.com/category/add",
     "EDIT_CATEGORY" : "http://cms.imaginesignage.com/category/edit",

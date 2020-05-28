@@ -84,4 +84,13 @@ router.post('/', (req, res) => {
     
 });
 
+router.route('/delete').post((req, res) => {
+  const usersList = req.body;
+
+  Contact.deleteMany({ _id: usersList }, function (err) {
+    if (err) return handleError(err);
+    // deleted at most one tank document
+  });
+});
+
 module.exports = router;

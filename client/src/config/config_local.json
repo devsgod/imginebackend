@@ -7,6 +7,7 @@
     "DELETE_USER": "http://localhost:4000/users/delete",
 
     "ALL_CONTACTS": "http://localhost:4000/contact/",
+    "DELETE_CONTACTS": "http://localhost:4000/contact/delete",
 
     "ALL_PRODUCTS": "http://localhost:4000/products/",
     "ADD_PRODUCT": "http://localhost:4000/products/add",
