@@ -7,6 +7,8 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const path = require('path');
 const fs = require('fs').promises;
+// user model
+let Contact = require('../models/contact.model');
 
 async function sendTestEmailConfirmation(name, email, phone, subject, message) {
   const mailOptions = {
@@ -42,14 +44,44 @@ async function sendTestEmailConfirmation(name, email, phone, subject, message) {
 
 // @route   POST /contact/
 // @access  Public
+router.route('/').get((req, res) => {
+  Contact.find()
+    .then(contact => res.json(contact))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
 router.post('/', (req, res) => {
   const { name, email, phone, subject, message } = req.body;
 
-    // sending email if success
+  console.log(req.body);
 
-    sendTestEmailConfirmation(name, email, phone, subject, message);
+  //Simple validation
+  if (!name || !email || !phone || !subject || !message) {
+    return res.status(400).json({ msg: 'Please enter all fields' });
+  }
 
-   
+    const newContact = new Contact({
+      name,
+      email,
+      phone,
+      subject,
+      message
+    });
+
+      newContact.save()
+      .then(() => {
+      // sending email if success
+      // sendTestEmailConfirmation(name, email, phone, subject, message);
+
+        res.json({
+          msg:"Save Successfully!",
+          contact: {
+            username: name,
+            email: email
+          }
+        });
+      });
+    
 });
 
 module.exports = router;

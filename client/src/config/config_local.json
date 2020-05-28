@@ -6,6 +6,8 @@
     "EDIT_USER": "http://localhost:4000/users/edit",
     "DELETE_USER": "http://localhost:4000/users/delete",
 
+    "ALL_CONTACTS": "http://localhost:4000/contact/",
+
     "ALL_PRODUCTS": "http://localhost:4000/products/",
     "ADD_PRODUCT": "http://localhost:4000/products/add",
     "EDIT_PRODUCT": "http://localhost:4000/products/edit",

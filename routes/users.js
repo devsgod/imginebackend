@@ -157,12 +157,12 @@ router.route('/confirmuserid').post((req, res) => {
 
 //Get user active signals
 router.route('/activate').post((req, res) => {
-  console.log(req.body);
+  console.log(req.body);  
   const { username, email, userStatus } = req.body;
   if (!email){
     return res.status(400).json({ msg: 'User id did not exist' });
   }
-  if (userStatus == "Active")
+  if (userStatus == "Activate")
   User.findOne({email})
   .then(user => {
     console.log(user);

@@ -40,7 +40,6 @@ const structure = [
     children: [
       { label: "All Users", link: "/app/users" },
       { label: "Contact Enquiries", link: "/app/users/contact" },
-      { label: "Brochure Request", link: "/app/users/brochure" },
     ]
   },
   {

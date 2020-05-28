@@ -6,6 +6,8 @@
     "EDIT_USER": "http://cms.imaginesignage.com/users/edit",
     "DELETE_USER": "http://cms.imaginesignage.com/users/delete",
 
+    "ALL_CONTACTS": "http://cms.imaginesignage.com/contact/",
+    
     "ALL_PRODUCTS": "http://cms.imaginesignage.com/products/",
     "ADD_PRODUCT": "http://cms.imaginesignage.com/products/add",
     "EDIT_PRODUCT": "http://cms.imaginesignage.com/products/edit",
@@ -48,4 +50,6 @@
     "ANALYSE_TODAY": "http://cms.imaginesignage.com/analysis/today",
 
     "PRODUCT_QUEUE": "http://cms.imaginesignage.com/queue"
+
+
 }

@@ -50,6 +50,14 @@ const columns = [
    }
   },
   {
+   name: "msg",
+   label: "Register Message",
+   options: {
+    filter: true,
+    sort: false,
+   }
+  },
+  {
     name: "createdAt",
     label: "CreatedAt",
     options: {

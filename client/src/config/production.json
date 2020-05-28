@@ -6,6 +6,8 @@
     "EDIT_USER": "/users/edit",
     "DELETE_USER": "/users/delete",
 
+    "ALL_CONTACTS": "/contact/",    
+
     "ALL_PRODUCTS": "/products/",
     "ADD_PRODUCT": "/products/add",
     "EDIT_PRODUCT": "/products/edit",

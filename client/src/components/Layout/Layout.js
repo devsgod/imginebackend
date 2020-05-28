@@ -25,7 +25,6 @@ import Charts from "../../pages/charts";
 
 import UserList from "../../pages/users/userList";
 import userContact from "../../pages/users/userContact";
-import UserBrochure from "../../pages/users/userBrochure";
 
 import ProductList from "../../pages/products/productList";
 import ProductAddOrUpdate from "../../pages/products/productAddOrUpdate";
@@ -88,7 +87,6 @@ function Layout(props) {
 
               <Route path="/app/users" exact={true} component={UserList} />
               <Route path="/app/users/contact" exact={true} component={userContact} />
-              <Route path="/app/users/brochure" exact={true} component={UserBrochure} />
               <Route path="/app/products/list" component={ProductList} />
 
               {/* add by :  add category */}

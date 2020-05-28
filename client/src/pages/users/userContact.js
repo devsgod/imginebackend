@@ -26,7 +26,7 @@ const columns = [
   //  }
   // },
   {
-   name: "username",
+   name: "name",
    label: "Username",
    options: {
     filter: true,
@@ -42,15 +42,23 @@ const columns = [
    }
   },
   {
-   name: "signupStatus",
-   label: "Register Status",
+   name: "subject",
+   label: "Subject",
    options: {
     filter: true,
     sort: false,
    }
   },
   {
-    name: "msg",
+    name: "phone",
+    label: "Phone",
+    options: {
+     filter: true,
+     sort: false,
+    }
+   },
+  {
+    name: "message",
     label: "Register Message",
     options: {
      filter: true,
@@ -93,7 +101,7 @@ function UserContact() {
 
   useEffect(() => {
    // getUserList(userDispatch, setIsLoading, setError);
-    axios.get(config.ALL_USERS)
+    axios.get(config.ALL_CONTACTS)
     .then(response => {
       console.log(response.data)
         if (response.data.length > 0) {
