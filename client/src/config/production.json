@@ -6,7 +6,11 @@
     "EDIT_USER": "/users/edit",
     "DELETE_USER": "/users/delete",
 
-    "ALL_CONTACTS": "/contact/",    
+    "ALL_CONTACTS": "/newsletter/",
+    "DELETE_CONTACTS": "/newsletter/delete",    
+
+    "ALL_NEWSLETTER": "/contact/",    
+    "DELETE_NEWSLETTER": "/contact/delete",  
 
     "ALL_PRODUCTS": "/products/",
     "ADD_PRODUCT": "/products/add",

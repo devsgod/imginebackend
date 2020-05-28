@@ -9,6 +9,9 @@
     "ALL_CONTACTS": "http://localhost:4000/contact/",
     "DELETE_CONTACTS": "http://localhost:4000/contact/delete",
 
+    "ALL_NEWSLETTER": "http://localhost:4000/newsletter/",
+    "DELETE_NEWSLETTER": "http://localhost:4000/newsletter/delete",
+
     "ALL_PRODUCTS": "http://localhost:4000/products/",
     "ADD_PRODUCT": "http://localhost:4000/products/add",
     "EDIT_PRODUCT": "http://localhost:4000/products/edit",

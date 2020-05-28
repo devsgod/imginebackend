@@ -8,6 +8,10 @@
 
     "ALL_CONTACTS": "http://cms.imaginesignage.com/contact/",
     "DELETE_CONTACTS": "http://cms.imaginesignage.com/contact/delete",
+
+    "ALL_NEWSLETTER": "http://cms.imaginesignage.com/newsletter/",
+    "DELETE_NEWSLETTER": "http://cms.imaginesignage.com/newsletter/delete",
+
     
     "ALL_PRODUCTS": "http://cms.imaginesignage.com/products/",
     "ADD_PRODUCT": "http://cms.imaginesignage.com/products/add",

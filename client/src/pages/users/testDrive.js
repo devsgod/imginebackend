@@ -18,56 +18,16 @@ import config from "../../config/config.json";
 
 const columns = [
   {
-   name: "_id",
-   label: "Id",
+   name: "email",
+   label: "Email",
    options: {
     filter: true,
     sort: true,
    }
   },
   {
-   name: "username",
-   label: "Username",
-   options: {
-    filter: true,
-    sort: false,
-   }
-  },
-  {
-   name: "firstName",
-   label: "First Name",
-   options: {
-    filter: true,
-    sort: false,
-   }
-  },
-  {
-   name: "lastName",
-   label: "Last Name",
-   options: {
-    filter: true,
-    sort: false,
-   }
-  },
-  {
-   name: "mobile",
-   label: "Phone",
-   options: {
-    filter: true,
-    sort: false,
-   }
-  },
-  {
-   name: "signupStatus",
-   label: "Register Status",
-   options: {
-    filter: true,
-    sort: false,
-   }
-  },
-  {
-   name: "msg",
-   label: "Register Message",
+   name: "status",
+   label: "Status",
    options: {
     filter: true,
     sort: false,
@@ -117,7 +77,7 @@ function TestDrive() {
 
   useEffect(() => {
    // getUserList(userDispatch, setIsLoading, setError);
-    axios.get(config.ALL_USERS)
+    axios.get(config.ALL_NEWSLETTER)
     .then(response => {
         if (response.data.length > 0) {
           setUserList(response.data);
@@ -159,7 +119,7 @@ function TestDrive() {
 
                 console.log(userArray);
 
-                axios.post(config.DELETE_USER, userArray)
+                axios.post(config.DELETE_NEWSLETTER, userArray)
                 .then(res => {
                 })
                 .catch(function (error) {

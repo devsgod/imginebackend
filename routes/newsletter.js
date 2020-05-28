@@ -40,6 +40,13 @@ async function sendTestEmailConfirmation( email) {
       });
 }
 
+// get all newS
+router.route('/').get((req, res) => {
+  Newsletter.find()
+    .then(users => res.json(users))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
 // @route   POST /contact/
 // @access  Public
 router.post('/', (req, res) => {
@@ -50,12 +57,23 @@ router.post('/', (req, res) => {
     email,
     status,
   });
+
   newS.save()
     .then(() => res.json(newS))
     .catch(err => res.status(400).json('Error: ' + err));
     
     // sending email if success
     sendTestEmailConfirmation(email);
+});
+
+// delete a user
+router.route('/delete').post((req, res) => {
+  const usersList = req.body;
+
+  Newsletter.deleteMany({ _id: usersList }, function (err) {
+    if (err) return handleError(err);
+    // deleted at most one tank document
+  });
 });
 
 module.exports = router;
