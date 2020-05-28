@@ -1,0 +1,42 @@
+{
+    "BASE_URL": "/",
+
+    "ALL_USERS": "/users/",
+    "ADD_USER": "/users/add",
+    "EDIT_USER": "/users/edit",
+    "DELETE_USER": "/users/delete",
+
+    "ALL_PRODUCTS": "/products/",
+    "ADD_PRODUCT": "/products/add",
+    "EDIT_PRODUCT": "/products/edit",
+    "DELETE_PRODUCT": "/products/delete",
+
+    "ALL_BLOGS": "/blogs/",
+    "ADD_BLOG": "/blogs/add",
+    "EDIT_BLOG": "/blogs/edit",
+    "DELETE_BLOG": "/blogs/delete",
+
+    "ALL_CLIENTS": "/clients/",
+    "ADD_CLIENT": "/clients/add",
+    "EDIT_CLIENT": "/clients/edit",
+    "DELETE_CLIENT": "/clients/delete",
+
+    "ALL_TESTIMONIALS": "/testimonials/",
+    "ADD_TESTIMONIAL": "/testimonials/add",
+    "EDIT_TESTIMONIAL": "/testimonials/edit",
+    "DELETE_TESTIMONIAL": "/testimonials/delete",
+
+    "ALL_WIDGETS": "/widgets/",
+    "ADD_WIDGET": "/widgets/add",
+    "EDIT_WIDGET": "/widgets/edit",
+    "DELETE_WIDGET": "/widgets/delete",
+
+    "ALL_FEATURES": "/features/",
+    "ADD_FEATURE": "/features/add",
+    "EDIT_FEATURE": "/features/edit",
+    "DELETE_FEATURE": "/features/delete",
+
+    "ANALYSE_TODAY": "/analysis/today",
+
+    "PRODUCT_QUEUE": "/queue"
+}

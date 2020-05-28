@@ -1,0 +1,51 @@
+{
+    "BASE_URL": "http://localhost:4000/",
+
+    "ALL_USERS": "http://localhost:4000/users/",
+    "ADD_USER": "http://localhost:4000/users/add",
+    "EDIT_USER": "http://localhost:4000/users/edit",
+    "DELETE_USER": "http://localhost:4000/users/delete",
+
+    "ALL_PRODUCTS": "http://localhost:4000/products/",
+    "ADD_PRODUCT": "http://localhost:4000/products/add",
+    "EDIT_PRODUCT": "http://localhost:4000/products/edit",
+    "DELETE_PRODUCT": "http://localhost:4000/products/delete",
+
+    "ALL_CATEGORY" : "http://localhost:4000/category/",
+    "ADD_CATEGORY" : "http://localhost:4000/category/add",
+    "EDIT_CATEGORY" : "http://localhost:4000/category/edit",
+    "DELETE_CATEGORY" : "http://localhost:4000/category/delete",
+
+    "ALL_ORDERS" : "http://localhost:4000/orders/",
+    "CHANGE_ORDER_SET" : "http://localhost:4000/orders/change",
+    "DELETE_ORDER_ROW" : "http://localhost:4000/orders/delete_orders_row",
+
+    "ALL_BLOGS": "http://localhost:4000/blogs/",
+    "ADD_BLOG": "http://localhost:4000/blogs/add",
+    "EDIT_BLOG": "http://localhost:4000/blogs/edit",
+    "DELETE_BLOG": "http://localhost:4000/blogs/delete",
+
+    "ALL_CLIENTS": "http://localhost:4000/clients/",
+    "ADD_CLIENT": "http://localhost:4000/clients/add",
+    "EDIT_CLIENT": "http://localhost:4000/clients/edit",
+    "DELETE_CLIENT": "http://localhost:4000/clients/delete",
+
+    "ALL_TESTIMONIALS": "http://localhost:4000/testimonials/",
+    "ADD_TESTIMONIAL": "http://localhost:4000/testimonials/add",
+    "EDIT_TESTIMONIAL": "http://localhost:4000/testimonials/edit",
+    "DELETE_TESTIMONIAL": "http://localhost:4000/testimonials/delete",
+
+    "ALL_WIDGETS": "http://localhost:4000/widgets/",
+    "ADD_WIDGET": "http://localhost:4000/widgets/add",
+    "EDIT_WIDGET": "http://localhost:4000/widgets/edit",
+    "DELETE_WIDGET": "http://localhost:4000/widgets/delete",
+
+    "ALL_FEATURES": "http://localhost:4000/features/",
+    "ADD_FEATURE": "http://localhost:4000/features/add",
+    "EDIT_FEATURE": "http://localhost:4000/features/edit",
+    "DELETE_FEATURE": "http://localhost:4000/features/delete",
+
+    "ANALYSE_TODAY": "http://localhost:4000/analysis/today",
+
+    "PRODUCT_QUEUE": "http://localhost:4000/queue"
+}
