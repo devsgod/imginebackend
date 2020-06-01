@@ -15,10 +15,11 @@ async function sendTestEmailConfirmation(user) {
       from: 'info@imaginesignage.com',
       to: user.email,
       // replyTo: 'Signup@imagineignage.com', 
-      subject: "Welcome!"
+      subject: "Welcome!",
+      text:"Imagine Signage"
   };
 
-  const fileLocation = path.join( __dirname, 'emails', 'Email_temp_test.html' );
+  const fileLocation = path.join( __dirname, 'emails', 'emailverification.html' );
     
   let html = await fs.readFile( fileLocation, 'utf-8' );
 
@@ -40,7 +41,7 @@ async function sendTestEmailConfirmation(user) {
 }
 
 //Send Welcome
-async function sendSuccessEmail(user) {
+async function sendSuccessEmail(user, username, password, login_url) {
 
   const mailOptions = {
       from: 'info@imaginesignage.com',
@@ -56,9 +57,9 @@ async function sendSuccessEmail(user) {
     // html = html.replace( '[(ConfirmURL)]', process.env.MAIL_SUCCESS + "?id=" + user.id );
     html = html.replace( 'firstName', user.firstName );
     html = html.replace( 'lastName', user.lastName );
-    html = html.replace( 'login_url', user.username );
-    html = html.replace( 'login_username', user.username );
-    html = html.replace( 'login_password', user.password );
+    html = html.replace( 'login_url', login_url );
+    html = html.replace( 'login_username', username );
+    html = html.replace( 'login_password', password );
     
     mailOptions.html = html;
 
@@ -193,8 +194,8 @@ router.route('/confirmuserid').post((req, res) => {
 
 //Get user active signals
 router.route('/activate').post((req, res) => {
-  console.log(req.body);  
-  const { username, email, userStatus } = req.body;
+  console.log(req.body);
+  const { username, email, userStatus, password, login_url } = req.body;
   if (!email){
     return res.status(400).json({ msg: 'User id did not exist' });
   }
@@ -234,7 +235,6 @@ router.route('/activate').post((req, res) => {
       }
     }
   });
-
 })
 
 // create/add a user for admin
@@ -250,10 +250,25 @@ router.route('/add').post((req, res) => {
       email,
       role,
       password,
+      companyName:" ",
+      msg:" ",
+      businesstype:" ",
+      accountname:" ",
+      mobile:" ",
+      lastName:" ",
+      firstName:" "
     });
 
-  newUser.save()
-    .then(() => res.json('User added!'))
+    console.log(newUser)
+
+    newUser.save()
+    .then(() => res.json({
+      user: {
+        name: username,
+        email: email        
+      },
+      msg:"success"
+    }))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 

@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
     if(!email || !password) {
       return res.status(400).json({ msg: 'Please enter all fields' });
     }
-  
+    console.log(email, password);
     // Check for existing user
     User.findOne({ email })
       .then(user => {
@@ -38,7 +38,7 @@ router.post('/', (req, res) => {
                   token,
                   user: {
                     id: user.id,
-                    name: user.name,
+                    name: user.username,
                     email: user.email
                   }
                 });

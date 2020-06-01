@@ -26,6 +26,14 @@ const columns = [
    }
   },
   {
+   name: "email",
+   label: "Email",
+   options: {
+    filter: true,
+    sort: false,
+   }
+  },
+  {
    name: "username",
    label: "Username",
    options: {

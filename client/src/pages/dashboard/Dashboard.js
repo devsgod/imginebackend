@@ -127,6 +127,82 @@ export default function Dashboard(props) {
 
         <Grid item lg={3} md={8} sm={6} xs={12}>
           <Widget
+            title="Today's Contacts"
+            upperTitle
+            bodyClass={classes.fullHeightBody}
+            className={classes.card}
+          ><LibraryIcon className={classes.iconColor} />
+            <div className={classes.visitsNumberContainer}>
+              <Typography variant="h1" color="success" className={classes.text}>{todaydata ? todaydata.soldproducts : "0"}</Typography>
+            </div>
+            <Grid
+              container
+              direction="row"
+              justify="space-between"
+              alignItems="center"
+            >
+              <Grid item>
+                <Typography color="text" colorBrightness="secondary">
+                  Sold today
+                </Typography>
+                <Typography size="md">{todaydata ? todaydata.soldproducts : "0"}</Typography>
+              </Grid>
+              <Grid item>
+                <Typography color="text" colorBrightness="secondary">
+                  Stock level
+                </Typography>
+                <Typography size="md">{todaydata && todaydata.soldproducts>100 ? "Good" : "Not good"}</Typography>
+              </Grid>
+              <Grid item>
+                <Typography color="text" colorBrightness="secondary">
+                  Top Buyers
+                </Typography>
+                <Typography size="md">Unknown</Typography>
+              </Grid>
+            </Grid>
+          </Widget>
+        </Grid>
+
+        <Grid item lg={3} md={8} sm={6} xs={12}>
+          <Widget
+            title="Today's Test Drive"
+            upperTitle
+            bodyClass={classes.fullHeightBody}
+            className={classes.card}
+          ><LibraryIcon className={classes.iconColor} />
+            <div className={classes.visitsNumberContainer}>
+              <Typography variant="h1" color="success" className={classes.text}>{todaydata ? todaydata.soldproducts : "0"}</Typography>
+            </div>
+            <Grid
+              container
+              direction="row"
+              justify="space-between"
+              alignItems="center"
+            >
+              <Grid item>
+                <Typography color="text" colorBrightness="secondary">
+                  Sold today
+                </Typography>
+                <Typography size="md">{todaydata ? todaydata.soldproducts : "0"}</Typography>
+              </Grid>
+              <Grid item>
+                <Typography color="text" colorBrightness="secondary">
+                  Stock level
+                </Typography>
+                <Typography size="md">{todaydata && todaydata.soldproducts>100 ? "Good" : "Not good"}</Typography>
+              </Grid>
+              <Grid item>
+                <Typography color="text" colorBrightness="secondary">
+                  Top Buyers
+                </Typography>
+                <Typography size="md">Unknown</Typography>
+              </Grid>
+            </Grid>
+          </Widget>
+        </Grid>
+
+        <Grid item lg={3} md={8} sm={6} xs={12}>
+          <Widget
             title="Recent Buys"
             upperTitle
             bodyClass={classes.fullHeightBody}

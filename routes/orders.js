@@ -55,11 +55,18 @@ router.route('/').get((req, res) => {
 router.route('/add').post((req, res) => {
 
     const {buyerInfo, cartData, orderDetail} = req.body;
+    console.log(req.body);
 
     console.log('received buyerInfo');
     console.log(buyerInfo);
+    Orders.countDocuments({}, function(err, c){
+        console.log("count",c);
+    });
     Orders.find().sort({"invoice.number" : -1}).limit(1).then(max => {
-        let invoiceNumber = max[0].invoice.number + 1;
+        let invoiceNumber = 0;
+        if (max[0]){
+            invoiceNumber = max[0].invoice.number + 1;
+        }
 
         let realInvoiceNum = "";
         if (invoiceNumber < 10) {

@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
 
-import config from "../config/config.json";
+// import config from "../config/config.json";
+import config from "../config/config_local.json";
 
 var UserStateContext = React.createContext();
 var UserDispatchContext = React.createContext();
@@ -15,7 +16,9 @@ function userReducer(state, action) {
     case "SIGN_OUT_SUCCESS":
       return { ...state, isAuthenticated: false };
     default: {
-      throw new Error(`Unhandled action type: ${action.type}`);
+      // throw new Error(`Unhandled action type: ${action.type}`);
+      alert("Login Failed");
+      return { ...state, isAuthenticated: false };
     }
   }
 }
@@ -60,23 +63,18 @@ function loginUser(dispatch, login, password, history, setIsLoading, setError) {
 
   if (!!login && !!password) {
     setTimeout(() => {
-      localStorage.setItem('id_token', 1)
       setError(null)
       setIsLoading(false)
       /**
        * JinZhuXian - User Login Start
        */
-      axios.get(config.ALL_USERS)
+      var admin_data = { email:login, password }
+      axios.post(config.USER_AUTH, admin_data)
       .then(response => {
-        if (response.data.length > 0) {
-          
-          response.data.map(user => {
-            if ( user.email === login && user.password === password ){
-              dispatch({ type: 'LOGIN_SUCCESS' })
-              history.push('/app/dashboard')
-            }
-          });
-          
+        if (response.data) {
+          console.log(response.data)
+            localStorage.setItem('id_token', response.data.token)
+            dispatch({ type: 'LOGIN_SUCCESS' })
         }
       })
       .catch((error) => {
@@ -104,7 +102,6 @@ function registerUser(dispatch, name, login, password, history, setIsLoading, se
 
   if (!!login && !!password && !!name) {
     setTimeout(() => {
-      localStorage.setItem('id_token', 1)
       setError(null)
       setIsLoading(false)
 
@@ -120,11 +117,17 @@ function registerUser(dispatch, name, login, password, history, setIsLoading, se
 
       axios.post(config.ADD_USER, user)
         .then(res => {
-          dispatch({ type: 'REGISTER_SUCCESS' })
-          history.push('/app/dashboard')
+          console.log(res.data);
+          if (res.data.msg == 'success'){
+            dispatch({ type: 'REGISTER_SUCCESS' })
+            localStorage.setItem('id_token', 1)
+            history.push('/app/dashboard')
+          }          
         })
         .catch(function (error) {
-          dispatch({ type: "REGISTER_FAILURE" });
+          // dispatch({ type: "REGISTER_FAILURE" });
+          alert("Register Failed");
+          console.log(error);
           setError(true);
           setIsLoading(false);
         });

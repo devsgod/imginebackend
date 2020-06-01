@@ -13,7 +13,6 @@ const todayID = () => {
   return year + "_" + month + "_" + date;
 }
 
-
 // @return Analysis all records
 router.route('/').get((req, res) => {
   Analysis.find()
