@@ -6,6 +6,8 @@
     "EDIT_USER": "http://localhost:4000/users/edit",
     "DELETE_USER": "http://localhost:4000/users/delete",
 
+    "USER_AUTH": "http://localhost:4000/auth",
+
     "ALL_CONTACTS": "http://localhost:4000/contact/",
     "DELETE_CONTACTS": "http://localhost:4000/contact/delete",
 
