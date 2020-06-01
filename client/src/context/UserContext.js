@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
 
-// import config from "../config/config.json";
-import config from "../config/config_local.json";
+import config from "../config/config.json";
+// import config from "../config/config_local.json";
 
 var UserStateContext = React.createContext();
 var UserDispatchContext = React.createContext();
