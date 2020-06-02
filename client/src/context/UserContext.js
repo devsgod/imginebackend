@@ -69,7 +69,7 @@ function loginUser(dispatch, login, password, history, setIsLoading, setError) {
        * JinZhuXian - User Login Start
        */
       var admin_data = { email:login, password }
-      axios.post(config.USER_AUTH, admin_data)
+      axios.post(config.ADMIN_AUTH, admin_data)
       .then(response => {
         if (response.data) {
           console.log(response.data)

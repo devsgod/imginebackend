@@ -6,7 +6,7 @@
     "EDIT_USER": "http://cms.imaginesignage.com/users/edit",
     "DELETE_USER": "http://cms.imaginesignage.com/users/delete",
     
-    "USER_AUTH": "http://cms.imaginesignage.com/auth",
+    "ADMIN_AUTH": "http://cms.imaginesignage.com/auth/admin",
 
     "ALL_CONTACTS": "http://cms.imaginesignage.com/contact/",
     "DELETE_CONTACTS": "http://cms.imaginesignage.com/contact/delete",

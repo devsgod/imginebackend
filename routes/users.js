@@ -256,7 +256,8 @@ router.route('/add').post((req, res) => {
       accountname:" ",
       mobile:" ",
       lastName:" ",
-      firstName:" "
+      firstName:" ",
+      signupStatus: "Admin"
     });
 
     console.log(newUser)

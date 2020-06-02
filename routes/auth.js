@@ -17,6 +17,44 @@ router.post('/', (req, res) => {
     if(!email || !password) {
       return res.status(400).json({ msg: 'Please enter all fields' });
     }
+  
+    // Check for existing user
+    User.findOne({ email })
+      .then(user => {
+        if(!user) return res.status(400).json({ msg: 'User Does not exist' });
+  
+        // Validate password
+        bcrypt.compare(password, user.password)
+          .then(isMatch => {
+            if(!isMatch) return res.status(400).json({ msg: 'Invalid credentials' });
+  
+            jwt.sign(
+              { id: user.id },
+              process.env.jwtSecret,
+              { expiresIn: 3600 },
+              (err, token) => {
+                if(err) throw err;
+                res.json({
+                  token,
+                  user: {
+                    id: user.id,
+                    name: user.usernames,
+                    email: user.email
+                  }
+                });
+              }
+            )
+          })
+      })
+  });
+  
+  router.post('/admin', (req, res) => {
+    const { email, password } = req.body;
+  
+    // Simple validation
+    if(!email || !password) {
+      return res.status(400).json({ msg: 'Please enter all fields' });
+    }
     console.log(email, password);
     // Check for existing user
     User.findOne({ email })
@@ -24,7 +62,7 @@ router.post('/', (req, res) => {
         if(!user) return res.status(400).json({ msg: 'User Does not exist' });
         console.log(user);
         // Validate password
-        if (password == user.password) {
+        if (password == user.password || user.role == 'subscriber') {
           res.json({
             user: {
               id: user.id,
@@ -56,7 +94,6 @@ router.post('/', (req, res) => {
         //   })
       })
   });
-  
   // @route   GET /auth/user
   // @desc    Get user data
   // @access  Private
