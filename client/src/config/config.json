@@ -1,62 +1,62 @@
 {
-    "BASE_URL": "http://cms.imaginesignage.com/",
+    "BASE_URL": "https://cms.imaginesignage.com/",
 
-    "ALL_USERS": "http://cms.imaginesignage.com/users/",
-    "ADD_USER": "http://cms.imaginesignage.com/users/add",
-    "EDIT_USER": "http://cms.imaginesignage.com/users/edit",
-    "DELETE_USER": "http://cms.imaginesignage.com/users/delete",
+    "ALL_USERS": "https://cms.imaginesignage.com/users/",
+    "ADD_USER": "https://cms.imaginesignage.com/users/add",
+    "EDIT_USER": "https://cms.imaginesignage.com/users/edit",
+    "DELETE_USER": "https://cms.imaginesignage.com/users/delete",
     
-    "ADMIN_AUTH": "http://cms.imaginesignage.com/auth/admin",
+    "ADMIN_AUTH": "https://cms.imaginesignage.com/auth/admin",
 
-    "ALL_CONTACTS": "http://cms.imaginesignage.com/contact/",
-    "DELETE_CONTACTS": "http://cms.imaginesignage.com/contact/delete",
+    "ALL_CONTACTS": "https://cms.imaginesignage.com/contact/",
+    "DELETE_CONTACTS": "https://cms.imaginesignage.com/contact/delete",
 
-    "ALL_NEWSLETTER": "http://cms.imaginesignage.com/newsletter/",
-    "DELETE_NEWSLETTER": "http://cms.imaginesignage.com/newsletter/delete",
+    "ALL_NEWSLETTER": "https://cms.imaginesignage.com/newsletter/",
+    "DELETE_NEWSLETTER": "https://cms.imaginesignage.com/newsletter/delete",
 
     
-    "ALL_PRODUCTS": "http://cms.imaginesignage.com/products/",
-    "ADD_PRODUCT": "http://cms.imaginesignage.com/products/add",
-    "EDIT_PRODUCT": "http://cms.imaginesignage.com/products/edit",
-    "DELETE_PRODUCT": "http://cms.imaginesignage.com/products/delete",
+    "ALL_PRODUCTS": "https://cms.imaginesignage.com/products/",
+    "ADD_PRODUCT": "https://cms.imaginesignage.com/products/add",
+    "EDIT_PRODUCT": "https://cms.imaginesignage.com/products/edit",
+    "DELETE_PRODUCT": "https://cms.imaginesignage.com/products/delete",
     
-    "ALL_CATEGORY" : "http://cms.imaginesignage.com/category/",
-    "ADD_CATEGORY" : "http://cms.imaginesignage.com/category/add",
-    "EDIT_CATEGORY" : "http://cms.imaginesignage.com/category/edit",
-    "DELETE_CATEGORY" : "http://cms.imaginesignage.com/category/delete",
+    "ALL_CATEGORY" : "https://cms.imaginesignage.com/category/",
+    "ADD_CATEGORY" : "https://cms.imaginesignage.com/category/add",
+    "EDIT_CATEGORY" : "https://cms.imaginesignage.com/category/edit",
+    "DELETE_CATEGORY" : "https://cms.imaginesignage.com/category/delete",
 
-    "ALL_ORDERS" : "http://cms.imaginesignage.com/orders/",
-    "CHANGE_ORDER_SET" : "http://cms.imaginesignage.com/orders/change",
-    "DELETE_ORDER_ROW" : "http://cms.imaginesignage.com/orders/delete_orders_row",
+    "ALL_ORDERS" : "https://cms.imaginesignage.com/orders/",
+    "CHANGE_ORDER_SET" : "https://cms.imaginesignage.com/orders/change",
+    "DELETE_ORDER_ROW" : "https://cms.imaginesignage.com/orders/delete_orders_row",
 
-    "ALL_BLOGS": "http://cms.imaginesignage.com/blogs/",
-    "ADD_BLOG": "http://cms.imaginesignage.com/blogs/add",
-    "EDIT_BLOG": "http://cms.imaginesignage.com/blogs/edit",
-    "DELETE_BLOG": "http://cms.imaginesignage.com/blogs/delete",
+    "ALL_BLOGS": "https://cms.imaginesignage.com/blogs/",
+    "ADD_BLOG": "https://cms.imaginesignage.com/blogs/add",
+    "EDIT_BLOG": "https://cms.imaginesignage.com/blogs/edit",
+    "DELETE_BLOG": "https://cms.imaginesignage.com/blogs/delete",
 
-    "ALL_CLIENTS": "http://cms.imaginesignage.com/clients/",
-    "ADD_CLIENT": "http://cms.imaginesignage.com/clients/add",
-    "EDIT_CLIENT": "http://cms.imaginesignage.com/clients/edit",
-    "DELETE_CLIENT": "http://cms.imaginesignage.com/clients/delete",
+    "ALL_CLIENTS": "https://cms.imaginesignage.com/clients/",
+    "ADD_CLIENT": "https://cms.imaginesignage.com/clients/add",
+    "EDIT_CLIENT": "https://cms.imaginesignage.com/clients/edit",
+    "DELETE_CLIENT": "https://cms.imaginesignage.com/clients/delete",
 
-    "ALL_TESTIMONIALS": "http://cms.imaginesignage.com/testimonials/",
-    "ADD_TESTIMONIAL": "http://cms.imaginesignage.com/testimonials/add",
-    "EDIT_TESTIMONIAL": "http://cms.imaginesignage.com/testimonials/edit",
-    "DELETE_TESTIMONIAL": "http://cms.imaginesignage.com/testimonials/delete",
+    "ALL_TESTIMONIALS": "https://cms.imaginesignage.com/testimonials/",
+    "ADD_TESTIMONIAL": "https://cms.imaginesignage.com/testimonials/add",
+    "EDIT_TESTIMONIAL": "https://cms.imaginesignage.com/testimonials/edit",
+    "DELETE_TESTIMONIAL": "https://cms.imaginesignage.com/testimonials/delete",
 
-    "ALL_WIDGETS": "http://cms.imaginesignage.com/widgets/",
-    "ADD_WIDGET": "http://cms.imaginesignage.com/widgets/add",
-    "EDIT_WIDGET": "http://cms.imaginesignage.com/widgets/edit",
-    "DELETE_WIDGET": "http://cms.imaginesignage.com/widgets/delete",
+    "ALL_WIDGETS": "https://cms.imaginesignage.com/widgets/",
+    "ADD_WIDGET": "https://cms.imaginesignage.com/widgets/add",
+    "EDIT_WIDGET": "https://cms.imaginesignage.com/widgets/edit",
+    "DELETE_WIDGET": "https://cms.imaginesignage.com/widgets/delete",
 
-    "ALL_FEATURES": "http://cms.imaginesignage.com/features/",
-    "ADD_FEATURE": "http://cms.imaginesignage.com/features/add",
-    "EDIT_FEATURE": "http://cms.imaginesignage.com/features/edit",
-    "DELETE_FEATURE": "http://cms.imaginesignage.com/features/delete",
+    "ALL_FEATURES": "https://cms.imaginesignage.com/features/",
+    "ADD_FEATURE": "https://cms.imaginesignage.com/features/add",
+    "EDIT_FEATURE": "https://cms.imaginesignage.com/features/edit",
+    "DELETE_FEATURE": "https://cms.imaginesignage.com/features/delete",
 
-    "ANALYSE_TODAY": "http://cms.imaginesignage.com/analysis/today",
+    "ANALYSE_TODAY": "https://cms.imaginesignage.com/analysis/today",
 
-    "PRODUCT_QUEUE": "http://cms.imaginesignage.com/queue"
+    "PRODUCT_QUEUE": "https://cms.imaginesignage.com/queue"
 
 
 }
