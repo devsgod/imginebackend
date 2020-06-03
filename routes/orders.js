@@ -175,7 +175,7 @@ router.route('/add').post(async(req, res) => {
             newItem.save().then(item => {
                 // create invoice
                 console.log({msg:"Success!"});
-                // sendPaidEmail(buyerInfo.email, invoiceInfo, buyerInfo);
+                sendPaidEmail(buyerInfo.email, invoiceInfo, buyerInfo);
                 res.json(item)
             });
         });
