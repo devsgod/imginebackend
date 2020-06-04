@@ -41,10 +41,10 @@ router.route('/add').post((req, res) => {
     console.log(req.file.path);
     let imageurl = '';
     if (process.env.NODE_ENV === 'production') {
-      imageurl = req.file.path.replace("client\\build\\", '');
+      imageurl = req.file.path.replace("client/build/", '');
     }
     else {
-      imageurl = req.file.path.replace("client\\public\\", '');
+      imageurl = req.file.path.replace("client/public/", '');
     }   console.log(imageurl);
 
     const newWidget = new Widget({

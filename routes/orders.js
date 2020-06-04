@@ -13,16 +13,19 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const {createInvoice} = require("../module/Invoice/createInvoice");
 
 async function sendPaidEmail(email, invoiceInfo, buyerInfo) {
+    invoiceInfo.filePath = invoiceInfo.filePath.replace('/var/imagine/server/client/build/','https://cms.imaginesignage.com/');
+    console.log(invoiceInfo);
     const mailOptions = {
         from: 'info@imaginesignage.com',
         to: email,
-        attachments : [
-            {
-                filename : invoiceInfo.fileName,
-                path : invoiceInfo.filePath,
-                contentType : 'application/pdf'
-            }
-        ],
+        // attachments : [
+        //     {
+        //         filename : invoiceInfo.fileName,
+        //         path : invoiceInfo.filePath,
+        //         content : "Imagine",
+        //         contentType : 'application/pdf'
+        //     }
+        // ],
         subject: "Thank you for paid!",
     };
 
@@ -32,7 +35,8 @@ async function sendPaidEmail(email, invoiceInfo, buyerInfo) {
 
         html = html.replace( '[(firstName)]', buyerInfo.firstName );
         html = html.replace( '[(lastName)]', buyerInfo.lastName );
-
+        html = html.replace( '[(InvoiceURL)]', invoiceInfo.filePath );
+        
         mailOptions.html = html;
         sgMail
         .send(mailOptions)
@@ -143,7 +147,7 @@ router.route('/add').post(async(req, res) => {
             };
 
             const invoiceInfo = createInvoice(invoice, "invoice_" + Date.now());
-            console.log(invoiceInfo)
+            console.log(invoiceInfo);
 
             const newItem = new Orders({
                 total : orderDetail.total,

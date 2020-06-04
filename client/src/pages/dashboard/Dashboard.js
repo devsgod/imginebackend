@@ -523,7 +523,7 @@ export default function Dashboard(props) {
           <Grid item md={4} sm={6} xs={12} key={stat.product}>
             <BigStat {...stat} />
           </Grid>
-        ))} */}
+        ))}
         <Grid item xs={12}>
           <Widget
             title="Support Product Requests"
@@ -535,7 +535,7 @@ export default function Dashboard(props) {
             <Table data={productsupport} />
             : "" }
           </Widget>
-        </Grid>
+        </Grid> */}
       </Grid>
     </>
   );

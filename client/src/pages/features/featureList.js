@@ -34,7 +34,7 @@ const columns = [
    }
   },
   {
-   name: "description",
+   name: "text",
    label: "Description",
    options: {
     filter: true,
