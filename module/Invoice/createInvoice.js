@@ -215,7 +215,7 @@ function generateHr(doc, y) {
 
 function formatCurrency(cents) {
     var realCents = parseFloat(cents);
-    return "$" + realCents.toFixed(2);
+    return "(R) " + realCents.toFixed(2);
 }
 
 function formatDate(date) {
